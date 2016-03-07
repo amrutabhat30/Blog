@@ -37,7 +37,7 @@ Database Set up
 2. Update the database configuration in settings.py in the project folder.
    ``` 
    DATABASES = 
-	`{
+	{
     		'default': {
         	'ENGINE': 'django.db.backends.mysql',
         	'NAME': 'stories_db',   #database name
