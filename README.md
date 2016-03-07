@@ -33,30 +33,28 @@ Deploying
 
 Database Set up
 --------------
-1. Create a database in MySQL database. Ex- CREATE DATABASE stories_db;
-
-Update the database configuration in settings.py in the project folder.
-
-DATABASES = 
-{
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stories_db',   #database name
-        'USER': 'root',		# MySQL user name
-        'PASSWORD': 'root12',	# MySQL password
-	}
-}
+1. Create a database in MySQL database. Ex- `CREATE DATABASE stories_db;`
+2. Update the database configuration in settings.py in the project folder.
+   DATABASES = 
+	`{
+    		'default': {
+        	'ENGINE': 'django.db.backends.mysql',
+        	'NAME': 'stories_db',   #database name
+        	'USER': 'mysql',		# MySQL user name
+        	'PASSWORD': 'mysql12',	# MySQL password
+	         }
+	}`
 
 
-2. Run `python manage.py migrate` to create the models. 
+3. Run `python manage.py migrate` to create the models. 
 
 Development Server
 --------------------
 
-4. Start the development server by running `python manage.py runserver 0.0.0.0:8000`
+1. Start the development server by running `python manage.py runserver 0.0.0.0:8000`
    and visit http://localhost:8000/submit/ to create a story.
 
-5. Visit http://localhost:8000/ to view the stories and up/down vote them.
+2. Visit http://localhost:8000/ to view the stories and up/down vote them.
 
 
 
