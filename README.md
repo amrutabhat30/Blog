@@ -9,24 +9,24 @@ Overview
 
 Blog application provides a web interfaces to
 
-1. Create a story by giving a title and link. [ Ex - http://localhost:8000/submit/]
-2. Up / Down vote individual stories. [Ex - http://localhost:8000/ ]
-3. Show top 5 stories (home page). [ Ex - http://localhost:8000/ ]
-4. Filter the home page by time (Past 7 hours, 1 day, 7 days) [ Ex- http://localhost:8000/stories/?duration=7 ] , 
+1. Create a story by giving a title and link. [ Ex - `http://localhost:8000/submit/` ]
+2. Up / Down vote individual stories. [Ex - `http://localhost:8000/` ]
+3. Show top 5 stories (home page). [ Ex - `http://localhost:8000/` ]
+4. Filter the home page by time (Past 7 hours, 1 day, 7 days) [ Ex- `http://localhost:8000/stories/?duration=7` ] , 
    where duration is the number of hours.
-5. Comment on stories [ Ex- view comments- http://localhost:8000/story/<story_id>/comments/
-			    add comment- http://localhost:8000/story/<story_id>/]
-6. Flag stories (admin page, which won’t be shown on the home page. [ http://localhost:8000/admin/ ]
+5. Comment on stories [ Ex- view comments- `http://localhost:8000/story/<story_id>/comments/`
+			    add comment- `http://localhost:8000/story/<story_id>/`]
+6. Flag stories (admin page, which won’t be shown on the home page. [ `http://localhost:8000/admin/` ]
 
 Requirements
 ------------
 
 * Python 2.7
-* If pip in not installed, install it using 
-	sudo apt-get install python-pip
-* Django 1.7 ( sudo pip install django==1.7 )
-* MySQL server ( sudo apt-get install mysql-server )
-* mysqldb ( sudo apt-get install python-mysqldb )
+* If pip is not installed, install it using 
+	`sudo apt-get install python-pip`
+* Django 1.7 ( `sudo pip install django==1.7` )
+* MySQL server ( `sudo apt-get install mysql-server` )
+* mysqldb ( `sudo apt-get install python-mysqldb` )
 
 Deploying
 ---------------------------
@@ -35,15 +35,17 @@ Database Set up
 --------------
 1. Create a database in MySQL database. Ex- `CREATE DATABASE stories_db;`
 2. Update the database configuration in settings.py in the project folder.
+   ``` 
    DATABASES = 
 	`{
     		'default': {
         	'ENGINE': 'django.db.backends.mysql',
         	'NAME': 'stories_db',   #database name
-        	'USER': 'mysql',		# MySQL user name
+        	'USER': 'mysql',	# MySQL user name
         	'PASSWORD': 'mysql12',	# MySQL password
 	         }
-	}`
+	}
+   ```
 
 
 3. Run `python manage.py migrate` to create the models. 
