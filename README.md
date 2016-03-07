@@ -37,14 +37,14 @@ Database Set up
 
 Update the database configuration in settings.py in the project folder.
 
-DATABASES = {
+DATABASES = 
+{
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'stories_db',   #database name
         'USER': 'root',		# MySQL user name
         'PASSWORD': 'root12',	# MySQL password
-
-    }
+	}
 }
 
 
@@ -53,7 +53,7 @@ DATABASES = {
 Development Server
 --------------------
 
-4. Start the development server by running 'python manage.py runserver 0.0.0.0:8000'
+4. Start the development server by running `python manage.py runserver 0.0.0.0:8000`
    and visit http://localhost:8000/submit/ to create a story.
 
 5. Visit http://localhost:8000/ to view the stories and up/down vote them.
